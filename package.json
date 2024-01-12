@@ -2,13 +2,19 @@
   "name": "day3",
   "version": "1.0.0",
   "description": "demo setup",
-  "main": "index.html",
+  "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
     "test": "jest"
   },
   "author": "deepak",
   "license": "ISC",
   "dependencies": {
-    "parcel": "^2.11.0"
+    "parcel": "^2.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
   }
 }
