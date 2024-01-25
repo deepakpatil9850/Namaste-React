@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
-function MenuItems(props) {
-  const [state, setState] = useState(false);
+import { useState } from "react"
 
-  return (  state &&
-      
-    <div >
-      {
-        props.list.itemCards.map(item => 
-          <div key={item?.card?.info?.id} className='bg-slate-50 shadow-md my-2' >
-            {item?.card?.info?.name}
-          </div>
-          )
-      }
-    </div>
+const MenuItems = ({itemCards}) => {
+
+
+
+  return (   
+            <div >
+              {
+                itemCards.map(item => 
+                  <div key={item?.card?.info?.id} className='bg-slate-50 shadow-md my-2' >
+                    {item?.card?.info?.name}
+                  </div>
+                  )
+              }
+            </div>
   )
 }
 

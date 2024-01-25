@@ -1,5 +1,5 @@
 import { useEffect,useState } from "react";
-
+import { Resto_API } from "./loadData";
 
 export default useRestroInfo = (link)=>{
 
@@ -12,7 +12,7 @@ export default useRestroInfo = (link)=>{
         },[]);
 
     const fetchData = async ()=>{
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.277693&lng=74.1843535&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const dataJson = await data.json();
         console.log(dataJson)
         setResList(dataJson?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants) 
